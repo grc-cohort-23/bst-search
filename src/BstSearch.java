@@ -26,7 +26,22 @@ public class BstSearch {
          if (target == null) {
             throw new NullPointerException("Target value cannot be null");
         }
-        // Implement here, and make sure to implement tests too!
         return false;
-}
-}
+    }
+      // check if target is in the left data of root 
+    if (target == root.left.data) {
+        return true; 
+        else {
+            return false; 
+        }
+    }
+
+    // check if target is in the right data of the root
+    if (target == root.right.data) {
+        returns true; }
+            else {
+                return false; 
+            }
+        }
+
+
