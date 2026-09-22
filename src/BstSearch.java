@@ -26,22 +26,36 @@ public class BstSearch {
          if (target == null) {
             throw new NullPointerException("Target value cannot be null");
         }
-        return false;
-    }
-      // check if target is in the left data of root 
-    if (target == root.left.data) {
-        return true; 
-        else {
-            return false; 
-        }
-    }
 
-    // check if target is in the right data of the root
-    if (target == root.right.data) {
-        returns true; }
-            else {
-                return false; 
+        BinaryTreeNode<T> current = root;
+        while(current != null) {
+            int comp = target.compareTo(current.data);  
+            if (comp == 0) {
+                return true;
+            } else if (comp < 0) {
+                current = current.left; 
+            } else {
+                current = current.right;
             }
         }
+        return false;
+    }
+}
+    // }
+    //   // check if target is in the left data of root 
+    // if (target == root.left.data) {
+    //     return true; 
+    //     else {
+    //         return false; 
+    //     }
+    // }
+
+    // // check if target is in the right data of the root
+    // if (target == root.right.data) {
+    //     returns true; }
+    //         else {
+    //             return false; 
+    //         }
+    //     }
 
 
