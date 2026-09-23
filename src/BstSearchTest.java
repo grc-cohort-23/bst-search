@@ -7,6 +7,11 @@ public class BstSearchTest {
     public void testContains15() {
         assertTrue(BstSearch.contains(testTree(), 15));
     }
+
+    @Test 
+    public void testNullTree() {
+        assertFalse(BstSearch.contains(null, 10));
+    }
     private BinaryTreeNode<Integer> testTree() {
         BinaryTreeNode<Integer> root = new BinaryTreeNode<>(23);
         root.left = new BinaryTreeNode<Integer>(13);
