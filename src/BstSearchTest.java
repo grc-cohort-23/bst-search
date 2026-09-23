@@ -2,6 +2,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 public class BstSearchTest {
+    @Test 
+    public void testNullTree() {
+        assertFalse(BstSearch.contains(null, 10));
+    }
+
+
+
 private BinaryTreeNode<Integer> testTree() {
     BinaryTreeNode<Integer> root = new BinaryTreeNode<>(23);
     root.left = new BinaryTreeNode<>(13);
