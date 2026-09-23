@@ -18,7 +18,24 @@ public class BstSearchTest {
         assertTrue(BstSearch.contains(root,10));
     }
 
+    @Test
+    public void testLeftTarget() {
+    // Arrange
+    BinaryTreeNode<Integer> root = new BinaryTreeNode<>(10);
+    root.left = new BinaryTreeNode<>(5);
 
+    // Assert
+    assertTrue(BstSearch.contains(root, 5));
+}
+
+    @Test 
+    public void testRightTarget(){
+        BinaryTreeNode<Integer> root = new BinaryTreeNode<>(10);
+
+        root.right = new BinaryTreeNode<>(15);
+
+        assertTrue(BstSearch.contains(root,15));
+    }
   
 
 }
