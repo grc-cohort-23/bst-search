@@ -23,6 +23,24 @@ public class BstSearch {
      */
     public static <T extends Comparable<T>> boolean contains(BinaryTreeNode<T> root, T target) {
         // Implement here, and make sure to implement tests too!
-        return false;
+
+        if (root == null) {
+            return false;
+        }
+
+        //had to jog my memory, compareTo produces an integer value that shows the relationship between two objects
+        //0 if objects are equal, <0 if the second object is larger, and >0 if the first object is greater
+        int comparable = root.data.compareTo(target);
+
+        if (comparable == 0) {
+            return true;
+        } else if (comparable > 0) {
+            
+            //current node is greater than the target node
+            return contains(root.left, target);
+        } else {
+            return contains(root.right, target);
+        }
+
     }
 }
