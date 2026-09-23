@@ -23,6 +23,22 @@ public class BstSearch {
      */
     public static <T extends Comparable<T>> boolean contains(BinaryTreeNode<T> root, T target) {
         // Implement here, and make sure to implement tests too!
-        return false;
+        if (root == null ){
+            return false;
+        }
+         //0 checks if the two values are equal 
+        if(root.data.compareTo(target) == 0) { 
+            return true;
+        }
+        //current is greater than target so go to the left
+        else if(
+            root.data.compareTo(target) > 0
+        ){
+            return contains(root.left, target);
+        }else{
+        //current is less than target so go to right subtree
+            return contains(root.right, target);
+        }
+
     }
 }
