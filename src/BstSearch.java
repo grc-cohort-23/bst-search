@@ -35,24 +35,11 @@ public class BstSearch {
         }
           if(target.compareTo(root.data)< 0){
             return contains(root.left, target);
-        }
-          if(target.compareTo(root.data)> 0){
+        }else {
             return contains(root.right, target);
         }
-
-      
-        }
-        return false;
     }}
 
 
 
-/**
- * check the root if null 
- * if the target is null throw nullPointerExecption
- * if the node im looking for is less than the root 
- * check the the left node 
- * if the node is greater than the root 
- * check the right node 
- * 
- */
+
