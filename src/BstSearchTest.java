@@ -33,4 +33,11 @@ public class BstSearchTest {
         assertFalse(BstSearch.contains(root, 39));
         assertFalse(BstSearch.contains(root, 30));
     }
+
+    @Test
+    void testTraverseBSTThrowNullPointerException(){
+        BinaryTreeNode<Integer> root = new BinaryTreeNode<>(50);
+        
+        assertThrows(NullPointerException.class, () -> BstSearch.contains(root, null));
+    }
 }
