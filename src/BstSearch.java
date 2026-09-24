@@ -23,6 +23,27 @@ public class BstSearch {
      */
     public static <T extends Comparable<T>> boolean contains(BinaryTreeNode<T> root, T target) {
         // Implement here, and make sure to implement tests too!
-        return false;
+        
+        // null
+        if (target == null) {
+            throw new NullPointerException();
+        }
+        // empty
+
+        if (root == null) {
+            return false;
+        }
+        // found
+        if (root.data.compareTo(target) == 0) {
+            return true;
+        }
+
+        // left
+        if (target.compareTo(root.data) < 0) {
+            return contains(root.left, target);
+        }
+        // right
+        return contains(root.right, target);
+
     }
 }
