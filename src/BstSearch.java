@@ -26,6 +26,9 @@ public class BstSearch {
         if (target == null) {
             throw new NullPointerException();
         }
-        return false;
+        if (root == null) {
+            return false;
+        }
+
     }
 }
