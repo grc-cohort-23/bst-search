@@ -33,6 +33,9 @@ public class BstSearch {
         if (root.data.compareTo(target) == 0) {
             return true;
         }
+        if (target.compareTo(root.data) < 0) {
+            return contains(root.left, target);
+        }
 
     }
 }
