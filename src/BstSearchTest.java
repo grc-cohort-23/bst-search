@@ -8,4 +8,12 @@ public class BstSearchTest {
 
         assertTrue(BstSearch.contains(root, 8));
     }
+
+    @Test
+    void containsLeft() {
+        BinaryTreeNode<Integer> root = new BinaryTreeNode<>(8);
+        root.left = new BinaryTreeNode<>(3);
+
+        assertTrue(BstSearch.contains(root, 3));
+    }
 }
