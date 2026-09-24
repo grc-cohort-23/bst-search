@@ -30,5 +30,9 @@ public class BstSearch {
             return false;
         }
 
+        if (root.data.compareTo(target) == 0) {
+            return true;
+        }
+
     }
 }
